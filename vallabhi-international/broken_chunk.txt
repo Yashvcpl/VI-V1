@@ -1,0 +1,165 @@
+  "debt-capital-market": {
+    heroSummary:
+      "Vallabhi International's Debt Capital Markets practice offers end-to-end advisory and execution support for companies raising debt through capital market instruments.",
+    introHeading: "Debt Capital Market",
+    introBody: `Vallabhi International offers professional debt syndication services designed to help businesses secure the right funding for growth, expansion, working capital, and project requirements. We work with companies to structure debt solutions that are practical, competitive, and aligned with their financial goals.
+
+Our approach focuses on strengthening balance sheets by designing customized capital structures that enhance profitability, liquidity, and financial stability. At Vallabhi International, we firmly believe that the efficiency and scalability of any business depend on a well-planned, seamless, and optimized fund-flow ecosystem.
+
+Leveraging our institutional network and sector expertise, Vallabhi Capital actively acts as an arranger for debt syndication, supporting businesses across private and public sectors. We have successfully executed mandates for term loans, working capital facilities, and structured debt solutions, partnering with leading enterprises across industries and contributing to their sustainable growth journeys.
+
+### Why Choose Vallabhi International
+
+**1. Expertise in Structuring Competitive Debt Solutions**
+We specialize in structuring customized debt solutions that align with each client's financial objectives. By leveraging market insights, strong lender relationships, and strategic negotiation, we help businesses access financing on competitive terms.
+
+**2. Strategic Debt Advisory**
+We help businesses access the right financing through carefully structured debt solutions aligned with their capital requirements, growth strategy, and long-term financial objectives. Our advisory approach focuses on creating sustainable funding structures that maximize value while minimizing financing costs.
+
+**3. Comprehensive knowledge of lending norms**
+We simplify the lending process by providing strategic guidance on financing structures, documentation, and lender requirements.
+
+**4. Cross-Border Financing Support**
+For businesses seeking international capital, we provide advisory support for cross-border financing opportunities by connecting clients with global financial institutions and strategic investment partners.
+
+**5. Understanding Lender Expectations**
+We evaluate each client's business, financial position, and funding objectives to develop financing solutions that align with lender expectations. Our advisory covers capital structuring, financial analysis, documentation support, and lender coordination to facilitate efficient debt raising.
+
+**6. Comprehensive Expertise in Debt Syndication**
+From requirement assessment to disbursement, we manage the full syndication process with lender coordination and documentation support.
+
+- **Requirement Assessment** - Understand the client's funding needs and develop an appropriate financing structure.
+- **Financial Evaluation** - Conduct detailed appraisal and due diligence to assess the business and its financing requirements.
+- **Information Memorandum (IM)** - Prepare and share a comprehensive Information Memorandum with potential lenders and investors.
+- **Lender Coordination** - Engage with banks, financial institutions, and investors to facilitate timely sanction of the proposed facilities.
+- **Term Finalization** - Coordinate with all stakeholders to align and finalize the commercial terms and conditions.
+- **Documentation & Disbursement** - Complete the required documentation and support the timely execution and disbursement of funds.`
+      },
+      {
+        title: "Investor network access",
+        description:
+          "We leverage our relationships with investors and institutions to secure the right capital partners for each issuance.",
+      },
+      {
+        title: "Structured advisory approach",
+        description:
+          "Our advice is rooted in rigorous financial analysis, transaction structuring, and strategic positioning.",
+      },
+      {
+        title: "End-to-end transaction support",
+        description:
+          "From documentation to pricing and closing, we support every phase of the debt capital markets process.",
+      },
+    ],
+    ctaHeading: "Take your debt issuance to market with confidence",
+    ctaDescription:
+      "Partner with Vallabhi International to structure, price, and place your next capital markets transaction.",
+    ctaButtonText: "Speak with our DCM team",
+    eligibilityHighlights: [],
+  },
+  "credit-assessment": {
+    heroSummary:
+      "Credit assessment evaluates creditworthiness to determine repayment ability and lending risk.",
+    introHeading: "Credit Assessment",
+    introBody: "Vallabhi International offers professional debt syndication services designed to help businesses secure the right funding for growth, expansion, working capital, and project requirements. We work with companies to structure debt solutions that are practical, competitive, and aligned with their financial goals.\n\nOur approach focuses on strengthening balance sheets by designing customized capital structures that enhance profitability, liquidity, and financial stability. At Vallabhi International, we firmly believe that the efficiency and scalability of any business depend on a well-planned, seamless, and optimized fund-flow ecosystem.\n\nLeveraging our institutional network and sector expertise, Vallabhi Capital actively acts as an arranger for debt syndication, supporting businesses across private and public sectors. We have successfully executed mandates for term loans, working capital facilities, and structured debt solutions, partnering with leading enterprises across industries and contributing to their sustainable growth journeys.\n\n### Why Choose Vallabhi International\n\n**1. Expertise in Structuring Competitive Debt Solutions**\nWe specialize in structuring customized debt solutions that align with each client's financial objectives. By leveraging market insights, strong lender relationships, and strategic negotiation, we help businesses access financing on competitive terms.\n\n**2. Strategic Debt Advisory**\nWe help businesses access the right financing through carefully structured debt solutions aligned with their capital requirements, growth strategy, and long-term financial objectives. Our advisory approach focuses on creating sustainable funding structures that maximize value while minimizing financing costs.\n\n**3. Comprehensive knowledge of lending norms**\nWe simplify the lending process by providing strategic guidance on financing structures, documentation, and lender requirements.\n\n**4. Cross-Border Financing Support**\nFor businesses seeking international capital, we provide advisory support for cross-border financing opportunities by connecting clients with global financial institutions and strategic investment partners.\n\n**5. Understanding Lender Expectations**\nWe evaluate each client's business, financial position, and funding objectives to develop financing solutions that align with lender expectations. Our advisory covers capital structuring, financial analysis, documentation support, and lender coordination to facilitate efficient debt raising.\n\n**6. Comprehensive Expertise in Debt Syndication**\nFrom requirement assessment to disbursement, we manage the full syndication process with lender coordination and documentation support.\n\n- **Requirement Assessment** - Understand the client's funding needs and develop an appropriate financing structure.\n- **Financial Evaluation** - Conduct detailed appraisal and due diligence to assess the business and its financing requirements.\n- **Information Memorandum (IM)** - Prepare and share a comprehensive Information Memorandum with potential lenders and investors.\n- **Lender Coordination** - Engage with banks, financial institutions, and investors to facilitate timely sanction of the proposed facilities.\n- **Term Finalization** - Coordinate with all stakeholders to align and finalize the commercial terms and conditions.\n- **Documentation & Disbursement** - Complete the required documentation and support the timely execution and disbursement of funds.",\n    sectionTitle: "Our Credit Assessment Services",
+    sectionSubtitle: "We assess financial stability and risk so businesses and lenders can move forward with confidence.",
+    offerings: [
+      {
+        title: "Retail Credit Assessment",
+        description:
+          "Evaluate an individual's income, credit history, and repayment capacity to determine loan eligibility.",
+      },
+      {
+        title: "MSME & Business Credit Assessment",
+        description:
+          "Analyze business financials, cash flow, and repayment ability to support informed lending decisions.",
+      },
+      {
+        title: "Corporate Credit Assessment",
+        description:
+          "Assess financial strength, business risk, and creditworthiness for medium and large enterprises.",
+      },
+    ],
+    whyChooseHeading: "Why choose our credit assessment team",
+    whyChooseItems: [
+      {
+        title: "Objective credit evaluation",
+        description:
+          "We deliver independent assessments that help lenders and borrowers make informed decisions.",
+      },
+      {
+        title: "Data-driven analysis",
+        description:
+          "Our approach combines financial statements, credit behavior, and market factors to assess repayment capacity.",
+      },
+    introBody: `Vallabhi International offers professional debt syndication services designed to help businesses secure the right funding for growth, expansion, working capital, and project requirements. We work with companies to structure debt solutions that are practical, competitive, and aligned with their financial goals.
+
+Our approach focuses on strengthening balance sheets by designing customized capital structures that enhance profitability, liquidity, and financial stability. At Vallabhi International, we firmly believe that the efficiency and scalability of any business depend on a well-planned, seamless, and optimized fund-flow ecosystem.
+
+Leveraging our institutional network and sector expertise, Vallabhi Capital actively acts as an arranger for debt syndication, supporting businesses across private and public sectors. We have successfully executed mandates for term loans, working capital facilities, and structured debt solutions, partnering with leading enterprises across industries and contributing to their sustainable growth journeys.
+
+### Why Choose Vallabhi International
+
+**1. Expertise in Structuring Competitive Debt Solutions**
+We specialize in structuring customized debt solutions that align with each client's financial objectives. By leveraging market insights, strong lender relationships, and strategic negotiation, we help businesses access financing on competitive terms.
+
+**2. Strategic Debt Advisory**
+We help businesses access the right financing through carefully structured debt solutions aligned with their capital requirements, growth strategy, and long-term financial objectives. Our advisory approach focuses on creating sustainable funding structures that maximize value while minimizing financing costs.
+
+**3. Comprehensive knowledge of lending norms**
+We simplify the lending process by providing strategic guidance on financing structures, documentation, and lender requirements.
+
+**4. Cross-Border Financing Support**
+For businesses seeking international capital, we provide advisory support for cross-border financing opportunities by connecting clients with global financial institutions and strategic investment partners.
+
+**5. Understanding Lender Expectations**
+We evaluate each client's business, financial position, and funding objectives to develop financing solutions that align with lender expectations. Our advisory covers capital structuring, financial analysis, documentation support, and lender coordination to facilitate efficient debt raising.
+
+**6. Comprehensive Expertise in Debt Syndication**
+From requirement assessment to disbursement, we manage the full syndication process with lender coordination and documentation support.
+
+- **Requirement Assessment** - Understand the client's funding needs and develop an appropriate financing structure.
+- **Financial Evaluation** - Conduct detailed appraisal and due diligence to assess the business and its financing requirements.
+- **Information Memorandum (IM)** - Prepare and share a comprehensive Information Memorandum with potential lenders and investors.
+- **Lender Coordination** - Engage with banks, financial institutions, and investors to facilitate timely sanction of the proposed facilities.
+- **Term Finalization** - Coordinate with all stakeholders to align and finalize the commercial terms and conditions.
+- **Documentation & Disbursement** - Complete the required documentation and support the timely execution and disbursement of funds.`
+        description:
+          "Advise on optimal capital structure across lending, equity, debt markets, M&A, and ratings.",
+      },
+      {
+        title: "Equity Planning",
+        description:
+          "Design compliant equity award programs that attract and retain top talent.",
+      },
+    ],
+    whyChooseHeading: "Why partner with Vallabhi International",
+    whyChooseItems: [
+      {
+        title: "Deep private equity experience",
+        description:
+          "We have worked with private equity-backed companies across buyouts, growth capital, and restructuring scenarios.",
+      },
+      {
+        title: "Problem-solving advisory",
+        description:
+          "We help CFOs build scalable solutions to raise funds, sell equity, and manage complex transactions.",
+      },
+      {
+        title: "Flexible capital solutions",
+        description:
+          "We coordinate with management, investors, and service providers to deliver customized financing outcomes.",
+      },
+      {
+        title: "Trusted long-term partner",
+        description:
+          "We focus on long-term relationships and complete corporate finance support for buyouts, divestitures, and leveraged transactions.",
+      },
+    ],
+    ctaHeading: "Partner with a trusted private equity advisory team",
+    ctaDescription:
+      "Work with Vallabhi International to structure growth, buyout, and equity solutions backed by deep market knowledge.",
+    ctaButtonText: "Explore PE Advisory",
+    eligibilityHighlights: [],
+  },
+};

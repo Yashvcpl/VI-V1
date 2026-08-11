@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-paper text-ledger font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-semibold text-ledger;
+  }
+
+  /* WCAG 2.1 AA: always show a visible focus ring for keyboard users */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid theme("colors.growth.DEFAULT");
+    outline-offset: 2px;
+  }
+
+  /* The ledger rule: a hairline divider used as a structural device throughout the
+     site (statement lines), not as decoration. */
+  .ledger-rule {
+    @apply border-t border-ledger/15;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 md:px-10;
+  }
+
+  .hero-banner {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    min-height: clamp(520px, 75vh, 820px);
+    max-height: 84vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 768px) {
+    .hero-banner {
+      min-height: clamp(480px, 60vh, 700px);
+      max-height: 700px;
+    }
+  }
+
+  .eyebrow {
+    @apply font-mono text-lg sm:text-xl tracking-[0.18em] uppercase text-growth-700 font-semibold;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-pill bg-growth px-7 py-3
+      font-display text-sm font-bold uppercase tracking-[0.08em] text-paper transition-colors
+      hover:bg-growth-700 focus-visible:bg-growth-700;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-pill border border-ledger/25
+      px-7 py-3 font-display text-sm font-bold uppercase tracking-[0.08em] text-ledger transition-colors
+      hover:border-ledger hover:bg-ledger/5;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100]
+      focus:rounded-card focus:bg-ledger focus:px-4 focus:py-2 focus:text-paper;
+  }
+
+  /* Typography for CMS-authored rich text (About Us overview, Service body,
+     Blog/News body). Kept deliberately plain - this content is edited by
+     non-technical staff in the admin and should never require inline styling. */
+  .prose-ledger :where(h2) {
+    @apply mt-10 text-2xl;
+  }
+  .prose-ledger :where(h3) {
+    @apply mt-8 text-xl;
+  }
+  .prose-ledger :where(p) {
+    @apply mt-5 leading-relaxed;
+  }
+  .prose-ledger :where(ul) {
+    @apply mt-5 list-disc space-y-2 pl-6;
+  }
+  .prose-ledger :where(ol) {
+    @apply mt-5 list-decimal space-y-2 pl-6;
+  }
+  .prose-ledger :where(a) {
+    @apply font-semibold text-growth-700 underline underline-offset-2;
+  }
+  .prose-ledger :where(blockquote) {
+    @apply mt-6 border-l-2 border-growth pl-4 italic text-ledger/75;
+  }
+  .prose-ledger :where(img) {
+    @apply mt-6 rounded-card;
+  }
+
+  .flip-card {
+    perspective: 1400px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.75s ease;
+    will-change: transform;
+  }
+
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-face {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+  }
+
+  .flip-card-front {
+    transform: rotateY(0deg);
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    box-shadow: inset 0 0 0 1px rgba(14, 58, 92, 0.04);
+    box-sizing: border-box;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    box-shadow: 0 30px 100px -40px rgba(16, 48, 80, 0.35);
+  }
+
+  /* Rich text editor list styling */
+  [contenteditable="true"] ul {
+    @apply mt-4 list-disc pl-6 space-y-1;
+  }
+  [contenteditable="true"] ol {
+    @apply mt-4 list-decimal pl-6 space-y-1;
+  }
+  [contenteditable="true"] li {
+    @apply ml-0;
+  }
+}
