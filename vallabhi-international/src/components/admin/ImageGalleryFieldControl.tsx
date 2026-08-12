@@ -105,7 +105,7 @@ export function ImageGalleryFieldControl({
             id={field.key}
             type="file"
             multiple
-            accept="image/*"
+            accept=".jpg,.jpeg,.png,.webp,.gif,.avif,.bmp"
             onChange={handleUpload}
             disabled={isUploading}
             className="hidden"

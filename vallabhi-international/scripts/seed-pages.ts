@@ -35,7 +35,7 @@ const seedPages: SeedPage[] = [
           heading: "Building Connections",
           headingAccent: "Creating Opportunities",
           subheading: "Your Global Partner for a Successful Tomorrow.",
-          bannerImageUrl: "/hero-team-photo.webp",
+          bannerImageUrl: "",
           bannerImageAlt: "The Vallabhi International advisory team",
           primaryCtaLabel: "Explore More",
           primaryCtaHref: "/services",
@@ -48,7 +48,7 @@ const seedPages: SeedPage[] = [
           subheading: "Helping businesses raise capital, manage risk, and unlock growth through expert financial advisory.",
           greenHeading: true,
           twoColumn: true,
-          imageUrl: "/hero-team-photo.webp",
+          imageUrl: "",
           body:
             "Vallabhi International is a trusted financial advisory firm dedicated to helping businesses unlock growth through strategic capital solutions and expert financial guidance. We partner with entrepreneurs, corporates, and institutions to deliver customized advisory services that support sustainable growth, long-term value creation, and confident decision-making.",
         },
@@ -71,7 +71,7 @@ const seedPages: SeedPage[] = [
         data: {
           heading: "Schedule Your Free Financial Consultation",
           subheading: "Share your details and our advisor will reach out to discuss an indicative loan plan for your business.",
-          sideImageUrl: "/hero-team-photo.webp",
+          sideImageUrl: "",
           formSource: "contact-us",
           messageLabel: "Message",
           submitLabel: "Submit",
@@ -93,7 +93,7 @@ const seedPages: SeedPage[] = [
           headingAccent: "Expert advisory for sustainable growth",
           subheading:
             "We combine deep financial expertise with a client-centric approach to deliver strategic advisory solutions tailored to each client’s unique goals and long-term success.",
-          bannerImageUrl: "/uploads/banner/1785405342257-final-banner.jpg",
+          bannerImageUrl: "",
           bannerImageAlt: "Vallabhi International leaders in a corporate office",
           bannerOverlayColor: "rgba(3,29,23,0.78)",
         },
@@ -107,7 +107,7 @@ const seedPages: SeedPage[] = [
           body:
             "At Vallabhi International, we combine deep financial expertise with a client-centric approach to deliver strategic advisory solutions. From debt syndication and capital markets to private equity, valuation, and insolvency advisory, our team works closely with every client to understand their unique objectives and develop tailored financial strategies.",
           twoColumn: true,
-          imageUrl: "/uploads/content/1785743699435-659.jpg.jpeg",
+          imageUrl: "",
         },
       },
       { type: "teamGrid", data: { eyebrow: "Meet our founders", heading: "The leadership shaping our strategy." } },

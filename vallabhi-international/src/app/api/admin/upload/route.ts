@@ -11,10 +11,12 @@ const ALLOWED_TYPES = new Set([
   "image/png",
   "image/webp",
   "image/gif",
+  "image/avif",
+  "image/bmp",
   "application/pdf",
 ]);
 
-const BANNER_IMAGE_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
+const BANNER_IMAGE_TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/avif", "image/bmp"]);
 const MAX_BYTES = 10 * 1024 * 1024; // 10MB
 const storageProvider = createStorageProvider();
 
@@ -41,14 +43,18 @@ export async function POST(request: NextRequest) {
     // Process banner images: resize to fixed dimensions
     let uploadFile = file;
     if (BANNER_IMAGE_TYPES.has(file.type)) {
-      const buffer = await file.arrayBuffer();
+      const buffer = Buffer.from(await file.arrayBuffer());
       let resizedBuffer: Buffer | null = null;
 
-      if (folder === "banner-desktop") {
-        resizedBuffer = await processImageForBannerDesktop(Buffer.from(buffer));
-      } else if (folder === "banner") {
-        // legacy carousel/banner uploads use the larger 1920x850 default
-        resizedBuffer = await processImageForBanner(Buffer.from(buffer));
+      try {
+        if (folder === "banner-desktop") {
+          resizedBuffer = await processImageForBannerDesktop(buffer);
+        } else if (folder === "banner") {
+          // legacy carousel/banner uploads use the larger 1920x850 default
+          resizedBuffer = await processImageForBanner(buffer);
+        }
+      } catch (resizeError) {
+        console.warn("Banner resize failed, falling back to original image upload:", resizeError);
       }
 
       if (resizedBuffer) {

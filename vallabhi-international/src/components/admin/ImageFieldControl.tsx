@@ -92,7 +92,7 @@ export function ImageFieldControl({ field, value, onChange }: Props) {
       <input
         ref={inputRef}
         type="file"
-        accept="image/*,application/pdf"
+        accept=".jpg,.jpeg,.png,.webp,.gif,.avif,.bmp"
         className="hidden"
         onChange={(event) => {
           const file = event.target.files?.[0];

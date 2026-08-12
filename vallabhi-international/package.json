@@ -29,7 +29,7 @@
     "bcryptjs": "^2.4.3",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.32.1",
-    "isomorphic-dompurify": "^2.14.0",
+    "isomorphic-dompurify": "2.14.0",
     "marked": "^12.0.2",
     "next": "^14.2.5",
     "next-auth": "^4.24.7",
