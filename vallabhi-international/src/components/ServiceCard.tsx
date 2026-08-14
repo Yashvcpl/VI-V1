@@ -124,12 +124,12 @@ export function ServiceCard({ title, description, href, icon, iconUrl, buttonTex
   const buttonHref = buttonLink?.trim() ? buttonLink : href;
 
   return (
-    <article className="group flex flex-col rounded-[28px] border border-ledger/10 bg-paper p-8 text-left shadow-[0_20px_60px_-35px_rgba(16,48,80,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_90px_-35px_rgba(16,48,80,0.3)]">
+    <article className="group rounded-[28px] border border-ledger/10 bg-paper p-8 text-left shadow-[0_20px_60px_-35px_rgba(16,48,80,0.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_10px_rgba(22,110,75,0.35)]">
       <div className="flex h-14 w-14 items-center justify-center rounded-full bg-growth-100 text-growth-700">
         <ServiceIcon variant={icon} iconUrl={iconUrl} />
       </div>
       <h3 className="mt-7 text-lg font-semibold text-ledger">{title}</h3>
-      <p className="mt-3 text-sm leading-7 text-ledger/70 flex-grow">{description}</p>
+      <p className="mt-3 text-sm leading-7 text-ledger/70">{description}</p>
       <Link href={buttonHref} className="mt-8 inline-flex items-center gap-2 rounded-full bg-growth-700 px-5 py-2.5 text-sm font-semibold text-paper transition hover:bg-growth-600">
         {CTA}
         <span aria-hidden="true">→</span>
