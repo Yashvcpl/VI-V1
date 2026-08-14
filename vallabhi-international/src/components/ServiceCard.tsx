@@ -5,7 +5,13 @@ import Link from "next/link";
 import { normalizePublicAssetUrl } from "@/lib/uploads/heroBanner";
 import type { ServiceIconVariant } from "@/lib/serviceIcons";
 
-export function ServiceIcon({ variant, iconUrl }: { variant: ServiceIconVariant; iconUrl?: string | null }) {
+export function ServiceIcon({
+  variant,
+  iconUrl,
+}: {
+  variant: ServiceIconVariant;
+  iconUrl?: string | null;
+}) {
   const normalizedIconUrl = normalizePublicAssetUrl(iconUrl);
 
   if (normalizedIconUrl) {
@@ -119,18 +125,36 @@ export interface ServiceCardProps {
   buttonLink?: string | null;
 }
 
-export function ServiceCard({ title, description, href, icon, iconUrl, buttonText, buttonLink }: ServiceCardProps) {
+export function ServiceCard({
+  title,
+  description,
+  href,
+  icon,
+  iconUrl,
+  buttonText,
+  buttonLink,
+}: ServiceCardProps) {
   const CTA = buttonText?.trim() ? buttonText : title;
   const buttonHref = buttonLink?.trim() ? buttonLink : href;
 
   return (
-    <article className="group rounded-[28px] border border-ledger/10 bg-paper p-8 text-left shadow-[0_20px_60px_-35px_rgba(16,48,80,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_10px_rgba(22,110,75,0.35)]">
-      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-growth-100 text-growth-700">
+    <article className="group flex h-[390px] flex-col rounded-[28px] border border-ledger/10 bg-paper p-8 text-left shadow-[0_20px_60px_-35px_rgba(16,48,80,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_10px_rgba(22,110,75,0.35)]">
+      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-growth-100 text-growth-700">
         <ServiceIcon variant={icon} iconUrl={iconUrl} />
       </div>
-      <h3 className="mt-7 text-lg font-semibold text-ledger">{title}</h3>
-      <p className="mt-3 text-sm leading-7 text-ledger/70">{description}</p>
-      <Link href={buttonHref} className="mt-8 inline-flex items-center gap-2 rounded-full bg-growth-700 px-5 py-2.5 text-sm font-semibold text-paper transition hover:bg-growth-600">
+
+      <h3 className="mt-7 shrink-0 text-lg font-semibold text-ledger">
+        {title}
+      </h3>
+
+      <p className="mt-3 min-h-[112px] overflow-hidden text-sm leading-7 text-ledger/70 line-clamp-4">
+        {description}
+      </p>
+
+      <Link
+        href={buttonHref}
+        className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-growth-700 px-5 py-2.5 text-sm font-semibold text-paper transition hover:bg-growth-600"
+      >
         {CTA}
         <span aria-hidden="true">→</span>
       </Link>
