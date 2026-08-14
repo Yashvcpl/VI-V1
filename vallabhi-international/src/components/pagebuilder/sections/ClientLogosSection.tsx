@@ -17,7 +17,7 @@ export async function ClientLogosSection({ data }: { data: { heading?: string } 
         {data.heading && <p className="eyebrow text-center">{data.heading}</p>}
         <ul className="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
           {partners.map((partner) => (
-            <li key={partner.name} className="grayscale transition hover:grayscale-0">
+            <li key={partner.name} className="transition">
               {partner.websiteUrl ? (
                 <a href={partner.websiteUrl} target="_blank" rel="noopener noreferrer" aria-label={partner.name}>
                   <Image src={partner.logoUrl} alt={partner.name} width={160} height={60} />
