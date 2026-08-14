@@ -124,7 +124,7 @@ export function ServiceCard({ title, description, href, icon, iconUrl, buttonTex
   const buttonHref = buttonLink?.trim() ? buttonLink : href;
 
   return (
-    <article className="group rounded-[28px] border border-ledger/10 bg-paper p-8 text-left shadow-[0_20px_60px_-35px_rgba(16,48,80,0.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_10px_rgba(22,110,75,0.35)]">
+    <article className="group rounded-[28px] border border-ledger/10 bg-paper p-8 text-left shadow-[0_20px_60px_-35px_rgba(16,48,80,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_10px_rgba(22,110,75,0.35)]">
       <div className="flex h-14 w-14 items-center justify-center rounded-full bg-growth-100 text-growth-700">
         <ServiceIcon variant={icon} iconUrl={iconUrl} />
       </div>
