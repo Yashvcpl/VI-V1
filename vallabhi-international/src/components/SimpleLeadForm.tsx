@@ -54,6 +54,7 @@ export function SimpleLeadForm({
 
       if (!response.ok) {
         const data = await response.json().catch(() => null);
+        console.error("API error response:", data);
 
         const issues = data?.issues;
         let validationMessage: string | null = null;

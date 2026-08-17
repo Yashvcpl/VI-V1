@@ -87,11 +87,20 @@ export async function POST(request: NextRequest) {
   };
 
   try {
+    if (!db) {
+      console.error("Database client is null - DATABASE_URL may not be configured properly");
+      return NextResponse.json(
+        { error: "Database client is not initialized. Check DATABASE_URL environment variable." },
+        { status: 500 }
+      );
+    }
     await db.insert(leads).values(newLead);
   } catch (error) {
-    console.error("Failed to store lead:", error);
+    const errorMsg = error instanceof Error ? error.message : String(error);
+    console.error("Failed to store lead:", errorMsg);
+    console.error("Full error:", error);
     return NextResponse.json(
-      { error: "Something went wrong. Please try again shortly." },
+      { error: `Database error: ${errorMsg}` },
       { status: 500 }
     );
   }
