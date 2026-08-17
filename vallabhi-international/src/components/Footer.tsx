@@ -2,18 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { asc, eq } from "drizzle-orm";
 import { db } from "@/lib/db/client";
-import { navigationItems, siteSettings } from "@/lib/db/schema";
+import { navigationItems, siteSettings, services } from "@/lib/db/schema";
 
 const DEFAULT_SITE_LINKS = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
   { label: "Insights", href: "/insights/blogs" },
+  { label: "Contact Us", href: "/contact-us" },
   { label: "Careers", href: "/careers" },
-];
-
-const SERVICE_LINKS = [
-  { label: "All Services", href: "/services" },
-  { label: "Schedule Your Free Financial Consultation", href: "/#loan-eligibility" },
 ];
 
 const DEFAULT_DESCRIPTION = "Vallabhi International helps businesses and founders unlock capital, structure credit strategy, and move with confidence.";
@@ -118,6 +114,14 @@ export async function Footer() {
     .orderBy(asc(navigationItems.sortOrder))
     .catch(() => [] as Array<{ label: string; href: string }>);
 
+  const serviceLinks: Array<{ label: string; href: string }> = await db
+    .select()
+    .from(services)
+    .where(eq(services.published, true))
+    .orderBy(asc(services.sortOrder))
+    .then((rows) => rows.map((row) => ({ label: row.title, href: `/services/${row.slug}` })))
+    .catch(() => [] as Array<{ label: string; href: string }>);
+
   const siteLinks = rows.length > 0 ? rows.map((r) => ({ label: r.label, href: r.href })) : DEFAULT_SITE_LINKS;
   const telHref = `tel:${phone.replace(/[^\d+]/g, "")}`;
   const mailHref = `mailto:${email}`;
@@ -125,7 +129,7 @@ export async function Footer() {
   return (
     <footer className="border-t border-ledger/10 bg-ledger text-paper">
       <div className="container-content py-14 md:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-[1.4fr_0.9fr_0.9fr_1fr_1fr] xl:items-start">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4 xl:items-start">
           <div className="flex flex-col items-start gap-4 text-left md:items-start">
             <Link href="/" className="inline-flex items-center" aria-label="Vallabhi International home">
               <Image src={logoUrl} alt="Vallabhi International" width={180} height={84} className="h-11 w-auto object-contain" priority />
@@ -133,8 +137,8 @@ export async function Footer() {
             <p className="max-w-xs text-sm leading-6 text-paper/80">{companyOverview}</p>
           </div>
 
-          <nav aria-label="Quick links" className="flex flex-col gap-3">
-            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-paper/60">Quick Links</h3>
+          <nav aria-label="Company" className="flex flex-col gap-3">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-paper/60">Company</h3>
             <ul className="flex flex-col gap-2.5">
               {siteLinks.map((link) => (
                 <li key={link.href}>
@@ -149,7 +153,7 @@ export async function Footer() {
           <nav aria-label="Services" className="flex flex-col gap-3">
             <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-paper/60">Services</h3>
             <ul className="flex flex-col gap-2.5">
-              {SERVICE_LINKS.map((link) => (
+              {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="font-body text-sm text-paper/85 transition hover:text-growth-300">
                     {link.label}
@@ -160,43 +164,42 @@ export async function Footer() {
           </nav>
 
           <div className="flex flex-col gap-3">
-            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-paper/60">Contact Information</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-paper/60">Get In Touch</h3>
             <ul className="flex flex-col gap-3 font-body text-sm text-paper/85">
               <li>
-                <p className="leading-6">{address}</p>
+                <span className="text-paper/60">Number :</span> <a href={telHref} className="transition hover:text-growth-300">{phone}</a>
               </li>
               <li>
-                <a href={telHref} className="transition hover:text-growth-300">{phone}</a>
+                <span className="text-paper/60">Mail :</span> <a href={mailHref} className="transition hover:text-growth-300">{email}</a>
               </li>
               <li>
-                <a href={mailHref} className="transition hover:text-growth-300">{email}</a>
+                <span className="text-paper/60">Address :</span> <p className="leading-6 inline">{address}</p>
               </li>
               <li>
-                <p className="leading-6">{businessHours}</p>
+                <span className="text-paper/60">Time :</span> <p className="leading-6 inline">{businessHours}</p>
               </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-paper/60">Social Media</h3>
-            <ul className="flex flex-wrap gap-2.5">
-              {socialLinks.length > 0 ? socialLinks.map((item) => (
-                <li key={`${item.label}-${item.href}`}>
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-paper/15 px-3 py-2 text-sm text-paper/85 transition duration-200 hover:-translate-y-0.5 hover:border-growth-300 hover:text-growth-300"
-                  >
-                    <span className="flex h-5 w-5 items-center justify-center text-paper/85 transition group-hover:text-growth-300">
-                      {getSocialIcon(item.label)}
-                    </span>
-                    <span>{item.label}</span>
-                  </a>
-                </li>
-              )) : (
-                <li className="text-sm text-paper/70">Social media links will appear here.</li>
-              )}
+              <li className="pt-2 border-t border-paper/10">
+                <span className="text-paper/60 block mb-3">Social Media :</span>
+                <ul className="flex flex-wrap gap-2.5">
+                  {socialLinks.length > 0 ? socialLinks.map((item) => (
+                    <li key={`${item.label}-${item.href}`}>
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full border border-paper/15 px-3 py-2 text-xs text-paper/85 transition duration-200 hover:-translate-y-0.5 hover:border-growth-300 hover:text-growth-300"
+                      >
+                        <span className="flex h-4 w-4 items-center justify-center text-paper/85 transition group-hover:text-growth-300">
+                          {getSocialIcon(item.label)}
+                        </span>
+                        <span>{item.label}</span>
+                      </a>
+                    </li>
+                  )) : (
+                    <li className="text-xs text-paper/70">Social media links will appear here.</li>
+                  )}
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
