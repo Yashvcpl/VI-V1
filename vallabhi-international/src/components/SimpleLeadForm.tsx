@@ -93,9 +93,21 @@ export function SimpleLeadForm({
 
   if (status === "success") {
     return (
-      <p role="status" className={`font-body text-lg ${variant === "dark" ? "text-paper" : "text-growth-700"}`}>
-        Thank you &mdash; we&rsquo;ve received your message and will be in touch shortly.
-      </p>
+      <div role="status" className={`flex flex-col items-center gap-4 rounded-[24px] p-8 text-center ${variant === "dark" ? "bg-paper/10 border border-paper/20" : "bg-growth-50 border border-growth-200"}`}>
+        <div className={`flex h-16 w-16 items-center justify-center rounded-full ${variant === "dark" ? "bg-paper/20" : "bg-growth-100"}`}>
+          <svg className={`h-8 w-8 ${variant === "dark" ? "text-paper" : "text-growth-700"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div>
+          <h3 className={`font-display text-xl font-semibold ${variant === "dark" ? "text-paper" : "text-growth-900"}`}>
+            Message Received!
+          </h3>
+          <p className={`mt-2 font-body text-sm ${variant === "dark" ? "text-paper/80" : "text-growth-700"}`}>
+            Thank you for reaching out. We appreciate your inquiry and will be in touch shortly.
+          </p>
+        </div>
+      </div>
     );
   }
 
