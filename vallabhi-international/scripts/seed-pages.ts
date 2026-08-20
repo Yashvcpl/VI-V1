@@ -45,7 +45,8 @@ const seedPages: SeedPage[] = [
         type: "textBlock",
         data: {
           heading: "About Vallabhi International",
-          subheading: "Helping businesses raise capital, manage risk, and unlock growth through expert financial advisory.",
+          subheading:
+            "Helping businesses raise capital, manage risk, and unlock growth through expert financial advisory.",
           greenHeading: true,
           twoColumn: true,
           imageUrl: "",
@@ -53,7 +54,13 @@ const seedPages: SeedPage[] = [
             "Vallabhi International is a trusted financial advisory firm dedicated to helping businesses unlock growth through strategic capital solutions and expert financial guidance. We partner with entrepreneurs, corporates, and institutions to deliver customized advisory services that support sustainable growth, long-term value creation, and confident decision-making.",
         },
       },
-      { type: "serviceListing", data: { heading: "Our Financial Solution", showViewAllLink: false } },
+      {
+        type: "serviceListing",
+        data: {
+          heading: "Our Financial Solution",
+          showViewAllLink: false,
+        },
+      },
       {
         type: "processSteps",
         data: {
@@ -70,7 +77,8 @@ const seedPages: SeedPage[] = [
         type: "consultationForm",
         data: {
           heading: "Schedule Your Free Financial Consultation",
-          subheading: "Share your details and our advisor will reach out to discuss an indicative loan plan for your business.",
+          subheading:
+            "Share your details and our advisor will reach out to discuss an indicative loan plan for your business.",
           sideImageUrl: "",
           formSource: "contact-us",
           messageLabel: "Message",
@@ -94,7 +102,8 @@ const seedPages: SeedPage[] = [
           subheading:
             "We combine deep financial expertise with a client-centric approach to deliver strategic advisory solutions tailored to each client’s unique goals and long-term success.",
           bannerImageUrl: "",
-          bannerImageAlt: "Vallabhi International leaders in a corporate office",
+          bannerImageAlt:
+            "Vallabhi International leaders in a corporate office",
           bannerOverlayColor: "rgba(3,29,23,0.78)",
         },
       },
@@ -102,71 +111,167 @@ const seedPages: SeedPage[] = [
         type: "textBlock",
         data: {
           eyebrow: "Why choose Vallabhi International",
-          heading: "A premium financial advisory partner for ambitious companies.",
-          subheading: "Our approach is disciplined, transparent, and designed to help you navigate credit, capital, and growth with confidence.",
+          heading:
+            "A premium financial advisory partner for ambitious companies.",
+          subheading:
+            "Our approach is disciplined, transparent, and designed to help you navigate credit, capital, and growth with confidence.",
           body:
             "At Vallabhi International, we combine deep financial expertise with a client-centric approach to deliver strategic advisory solutions. From debt syndication and capital markets to private equity, valuation, and insolvency advisory, our team works closely with every client to understand their unique objectives and develop tailored financial strategies.",
           twoColumn: true,
           imageUrl: "",
         },
       },
-      { type: "teamGrid", data: { eyebrow: "Meet our founders", heading: "The leadership shaping our strategy." } },
-      { type: "timeline", data: { eyebrow: "Our Journey", heading: "From incorporation to impact." } },
-      { type: "valuesGrid", data: { eyebrow: "Our Philosophy", heading: "A modern advisory ethos." } },
-      { type: "imageGallery", data: { eyebrow: "Life at Vallabhi", heading: "A look inside the team." } },
+      {
+        type: "teamGrid",
+        data: {
+          eyebrow: "Meet our founders",
+          heading: "The leadership shaping our strategy.",
+        },
+      },
+      {
+        type: "timeline",
+        data: {
+          eyebrow: "Our Journey",
+          heading: "From incorporation to impact.",
+        },
+      },
+      {
+        type: "valuesGrid",
+        data: {
+          eyebrow: "Our Philosophy",
+          heading: "A modern advisory ethos.",
+        },
+      },
+      {
+        type: "imageGallery",
+        data: {
+          eyebrow: "Life at Vallabhi",
+          heading: "A look inside the team.",
+        },
+      },
     ],
   },
   {
     slug: "services",
     title: "Services",
-    seoDescription:
-      "Explore Vallabhi International's lending products",
+    seoDescription: "Explore Vallabhi International's lending products",
     sections: [
-      { type: "serviceListing", data: { eyebrow: "Services", heading: "Finance built around your business.", showViewAllLink: false } },
+      {
+        type: "serviceListing",
+        data: {
+          eyebrow: "Services",
+          heading: "Finance built around your business.",
+          showViewAllLink: false,
+        },
+      },
     ],
   },
   {
     slug: "insights-blogs",
     title: "Insights - Blogs",
-    seoDescription: "Perspectives on MSME lending, financial inclusion and small business growth from the Vallabhi International team.",
-    sections: [{ type: "contentListing", data: { eyebrow: "Insights", heading: "Blogs", source: "blogPosts" } }],
+    seoDescription:
+      "Perspectives on MSME lending, financial inclusion and small business growth from the Vallabhi International team.",
+    sections: [
+      {
+        type: "contentListing",
+        data: {
+          eyebrow: "Insights",
+          heading: "Blogs",
+          source: "blogPosts",
+        },
+      },
+    ],
   },
   {
     slug: "insights-news",
     title: "Insights - News",
-    seoDescription: "Company announcements and press coverage for Vallabhi International and Vallabhi Capital.",
-    sections: [{ type: "contentListing", data: { eyebrow: "Insights", heading: "News", source: "newsItems" } }],
+    seoDescription:
+      "Company announcements and press coverage for Vallabhi International and Vallabhi Capital.",
+    sections: [
+      {
+        type: "contentListing",
+        data: {
+          eyebrow: "Insights",
+          heading: "News",
+          source: "newsItems",
+        },
+      },
+    ],
   },
   {
     slug: "insights-reports",
     title: "Insights - Reports",
-    seoDescription: "Download research reports and disclosures published by Vallabhi International.",
-    sections: [{ type: "contentListing", data: { eyebrow: "Insights", heading: "Reports", source: "reports" } }],
+    seoDescription:
+      "Download research reports and disclosures published by Vallabhi International.",
+    sections: [
+      {
+        type: "contentListing",
+        data: {
+          eyebrow: "Insights",
+          heading: "Reports",
+          source: "reports",
+        },
+      },
+    ],
   },
   {
     slug: "careers",
     title: "Careers",
-    seoDescription: "Join Vallabhi International - explore open roles and build a career closing India's MSME credit gap.",
+    seoDescription:
+      "Join Vallabhi International - explore open roles and build a career closing India's MSME credit gap.",
     sections: [
       {
         type: "textBlock",
         data: {
           eyebrow: "Careers",
           heading: "Build the infrastructure MSME India runs on.",
-          body: "We're a small, deliberate team working on credit access, underwriting and operations for one of India's most underserved business segments.",
+          body:
+            "We're a small, deliberate team working on credit access, underwriting and operations for one of India's most underserved business segments.",
         },
       },
-      { type: "jobOpeningsList", data: { heading: "Build Your Career With Us" } },
-      { type: "contactForm", data: { heading: "Get in touch about a role", subheading: "Tell us a bit about yourself and which role (or type of role) interests you.", formSource: "careers", messageLabel: "Tell us about yourself", submitLabel: "Send Application" } },
+      {
+        type: "jobOpeningsList",
+        data: {
+          heading: "Build Your Career With Us",
+        },
+      },
+      {
+        type: "contactForm",
+        data: {
+          heading: "Get in touch about a role",
+          subheading:
+            "Tell us a bit about yourself and which role (or type of role) interests you.",
+          formSource: "careers",
+          messageLabel: "Tell us about yourself",
+          submitLabel: "Send Application",
+        },
+      },
     ],
   },
   {
     slug: "contact-us",
     title: "Contact Us",
-    seoDescription: "Get in touch with Vallabhi International for MSME loans, loan against property, equipment finance and general enquiries.",
+    seoDescription:
+      "Get in touch with Vallabhi International for MSME loans, loan against property, equipment finance and general enquiries.",
     sections: [
-      { type: "contactInfoBlock", data: { eyebrow: "Contact Us", heading: "Let's talk about your business.", subheading: "Whether you have a question about a loan product or want to discuss a partnership, our team typically responds within one business day." } },
-      { type: "contactForm", data: { heading: "Send us a message", formSource: "contact-us", messageLabel: "How can we help?", submitLabel: "Send Message" } },
+      {
+        type: "contactInfoBlock",
+        data: {
+          eyebrow: "Contact Us",
+          heading: "Let's talk about your business.",
+          subheading:
+            "Whether you have a question about a loan product or want to discuss a partnership, our team typically responds within one business day.",
+        },
+      },
+      {
+        type: "contactForm",
+        data: {
+          heading: "Send us a message",
+          formSource: "contact-us",
+          messageLabel: "How can we help?",
+          submitLabel: "Send Message",
+        },
+      },
     ],
   },
 ];
@@ -178,25 +283,48 @@ async function main() {
   }
 
   for (const seedPage of seedPages) {
-    const [existing] = await db.select().from(pages).where(eq(pages.slug, seedPage.slug)).limit(1);
+    const [existing] = await db
+      .select()
+      .from(pages)
+      .where(eq(pages.slug, seedPage.slug))
+      .limit(1);
+
     let page;
 
     if (existing) {
       page = existing;
       console.log(`Updating "${seedPage.slug}".`);
-      await db.delete(pageSections).where(eq(pageSections.pageId, page.id));
-      await db.update(pages).set({ title: seedPage.title, seoTitle: seedPage.seoTitle, seoDescription: seedPage.seoDescription }).where(eq(pages.id, page.id));
+
+      await db
+        .delete(pageSections)
+        .where(eq(pageSections.pageId, page.id));
+
+      await db
+        .update(pages)
+        .set({
+          title: seedPage.title,
+          seoTitle: seedPage.seoTitle,
+          seoDescription: seedPage.seoDescription,
+        })
+        .where(eq(pages.id, page.id));
     } else {
       const [newPage] = await db
         .insert(pages)
-        .values({ slug: seedPage.slug, title: seedPage.title, seoTitle: seedPage.seoTitle, seoDescription: seedPage.seoDescription })
+        .values({
+          slug: seedPage.slug,
+          title: seedPage.title,
+          seoTitle: seedPage.seoTitle,
+          seoDescription: seedPage.seoDescription,
+        })
         .returning();
+
       page = newPage;
       console.log(`Seeding "${seedPage.slug}".`);
     }
 
     for (let i = 0; i < seedPage.sections.length; i++) {
       const section = seedPage.sections[i];
+
       await db.insert(pageSections).values({
         pageId: page.id,
         type: section.type,
@@ -206,7 +334,9 @@ async function main() {
       });
     }
 
-    console.log(`Saved "${seedPage.slug}" with ${seedPage.sections.length} sections.`);
+    console.log(
+      `Saved "${seedPage.slug}" with ${seedPage.sections.length} sections.`
+    );
   }
 
   const valuesSeed = [
@@ -236,13 +366,26 @@ async function main() {
     },
   ];
 
-  const existingValues = await db.select().from(companyValues).catch(() => []);
+  const existingValues = await db
+    .select()
+    .from(companyValues)
+    .catch(() => []);
+
   for (const seedValue of valuesSeed) {
-    const existing = existingValues.find((value: { title?: string | null; id?: number }) => String(value.title).toLowerCase() === seedValue.title.toLowerCase());
+    const existing = existingValues.find(
+      (value: { title?: string | null; id?: number }) =>
+        String(value.title).toLowerCase() === seedValue.title.toLowerCase()
+    );
+
     if (existing) {
       await db
         .update(companyValues)
-        .set({ description: seedValue.description, iconUrl: seedValue.iconUrl, iconAlt: seedValue.iconAlt, sortOrder: seedValue.sortOrder })
+        .set({
+          description: seedValue.description,
+          iconUrl: seedValue.iconUrl,
+          iconAlt: seedValue.iconAlt,
+          sortOrder: seedValue.sortOrder,
+        })
         .where(eq(companyValues.id, existing.id));
     } else {
       await db.insert(companyValues).values(seedValue);
@@ -250,7 +393,8 @@ async function main() {
   }
 
   console.log(`Seeded ${valuesSeed.length} company values rows.`);
-/*
+
+  /*
   const leadershipSeed = [
     {
       name: "Amit Patel",
@@ -277,16 +421,24 @@ async function main() {
       sortOrder: 2,
     },
   ];
-*/
-  const existingLeadership = await db.select().from(leadershipMembers).catch(() => []);
+
+  const existingLeadership = await db
+    .select()
+    .from(leadershipMembers)
+    .catch(() => []);
+
   if (existingLeadership.length === 0) {
     for (const leader of leadershipSeed) {
       await db.insert(leadershipMembers).values(leader);
     }
+
     console.log(`Seeded ${leadershipSeed.length} founder rows.`);
   } else {
-    console.log(`Found ${existingLeadership.length} existing founder rows; skipping leadership seed.`);
+    console.log(
+      `Found ${existingLeadership.length} existing founder rows; skipping leadership seed.`
+    );
   }
+  */
 
   process.exit(0);
 }
