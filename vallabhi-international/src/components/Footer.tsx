@@ -4,16 +4,15 @@ import { asc, eq } from "drizzle-orm";
 import { db } from "@/lib/db/client";
 import { navigationItems, siteSettings, services } from "@/lib/db/schema";
 
-const DEFAULT_SITE_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about-us" },
-  { label: "Insights", href: "/insights/blogs" },
-  { label: "Contact Us", href: "/contact-us" },
-  { label: "Careers", href: "/careers" },
+const DEFAULT_SITE_LINKS: Array<{ label: string; href: string }> = [
+  // { label: "Home", href: "/" },
+  // { label: "About Us", href: "/about-us" },
+  // { label: "Insights", href: "/insights/blogs" },
+  // { label: "Contact Us", href: "/contact-us" },
+  // { label: "Careers", href: "/careers" },
 ];
 
-const DEFAULT_DESCRIPTION =
-  "Vallabhi International helps businesses and founders unlock capital, structure credit strategy, and move with confidence.";
+const DEFAULT_DESCRIPTION = "";
 
 function stripMarkdown(value?: string | null) {
   return (value ?? "")
@@ -144,16 +143,13 @@ export async function Footer() {
 
   const address =
     typedSettings?.contactAddress ??
-    "SF-4C, Second Floor, Rishabh Ipex Mall, Patparganj, IP Extension, Delhi, India";
+    /* "SF-4C, Second Floor, Rishabh Ipex Mall, Patparganj, IP Extension, Delhi, India" */ "";
 
-  const phone =
-    typedSettings?.contactPhone ?? "+91 11 4000 0000";
+  const phone = typedSettings?.contactPhone ?? /* "+91 11 4000 0000" */ "";
 
-  const email =
-    typedSettings?.contactEmail ?? "info@vallabhicapital.com";
+  const email = typedSettings?.contactEmail ?? /* "info@vallabhicapital.com" */ "";
 
-  const businessHours =
-    typedSettings?.businessHours ?? "Mon - Sat: 9:00 AM - 6:00 PM";
+  const businessHours = typedSettings?.businessHours ?? /* "Mon - Sat: 9:00 AM - 6:00 PM" */ "";
 
   const socialLinks = parseSocialLinks(typedSettings?.socialLinks);
 
@@ -190,7 +186,7 @@ export async function Footer() {
         }))
     )
     .catch(() => [] as Array<{ label: string; href: string }>);
-
+    
   const siteLinks =
     rows.length > 0
       ? rows.map((r) => ({

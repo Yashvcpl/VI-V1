@@ -24,11 +24,11 @@ export async function ContactInfoBlockSection({ data, isFirstOnPage }: { data: D
   const Heading = isFirstOnPage ? "h1" : "h2";
   const [settings] = await db.select().from(siteSettingsTable).where(eq(siteSettingsTable.id, 1)).limit(1).catch(() => []);
 
-  const address = settings?.contactAddress ?? "B-303, Rustomjee Central Park Business Spaces Andheri - Kurla Rd, Chakala, Andheri East, Mumbai, Maharashtra - 400093";
-  const phone = settings?.contactPhone ?? "+91 11 4000 0000";
-  const email = settings?.contactEmail ?? "info@vallabhicapital.com";
-  const businessHours = settings?.businessHours ?? "Mon - Sat: 9:00 AM - 6:00 PM";
-  const mapUrl = settings?.googleMapUrl ?? "https://maps.google.com";
+  const address = settings?.contactAddress ?? /* "B-303, Rustomjee Central Park Business Spaces Andheri - Kurla Rd, Chakala, Andheri East, Mumbai, Maharashtra - 400093" */ "";
+  const phone = settings?.contactPhone ?? /* "+91 11 4000 0000" */ "";
+  const email = settings?.contactEmail ?? /* "info@vallabhicapital.com" */ "";
+  const businessHours = settings?.businessHours ?? /* "Mon - Sat: 9:00 AM - 6:00 PM" */ "";
+  const mapUrl = settings?.googleMapUrl ?? /* "https://maps.google.com" */ "";
   const socialLinks = formatSocialLinks(settings?.socialLinks);
 
   return (

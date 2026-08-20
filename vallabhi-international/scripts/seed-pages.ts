@@ -120,9 +120,9 @@ const seedPages: SeedPage[] = [
     slug: "services",
     title: "Services",
     seoDescription:
-      "Explore Vallabhi International's lending products: MSME loans, loan against property, equipment finance and affordable housing finance.",
+      "Explore Vallabhi International's lending products",
     sections: [
-      { type: "serviceListing", data: { eyebrow: "Services", heading: "Finance built around your business, not a template.", showViewAllLink: false } },
+      { type: "serviceListing", data: { eyebrow: "Services", heading: "Finance built around your business.", showViewAllLink: false } },
     ],
   },
   {
@@ -250,7 +250,7 @@ async function main() {
   }
 
   console.log(`Seeded ${valuesSeed.length} company values rows.`);
-
+/*
   const leadershipSeed = [
     {
       name: "Amit Patel",
@@ -277,7 +277,7 @@ async function main() {
       sortOrder: 2,
     },
   ];
-
+*/
   const existingLeadership = await db.select().from(leadershipMembers).catch(() => []);
   if (existingLeadership.length === 0) {
     for (const leader of leadershipSeed) {

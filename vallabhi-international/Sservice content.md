@@ -40,7 +40,8 @@ We specialize in structuring customized debt solutions that align with each clie
 We help businesses access the right financing through carefully structured debt solutions aligned with their capital requirements, growth strategy, and long-term financial objectives. Our advisory approach focuses on creating sustainable funding structures that maximize value while minimizing financing costs.
 
 **3.Comprehensive knowledge of lending norms**  
-We simplify the lending process by providing strategic guidance on financing structures, documentation, and lender requirements.
+We simplify the lending process by providing strategi
+c guidance on financing structures, documentation, and lender requirements.
 
 **4.Cross-Border Financing Support**  
 For businesses seeking international capital, we provide advisory support for cross-border financing opportunities by connecting clients with global financial institutions and strategic investment partners.

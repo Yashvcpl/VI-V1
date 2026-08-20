@@ -4,21 +4,21 @@ import { navigationItems } from "@/lib/db/schema";
 import { getAllServices } from "@/lib/services";
 import { HeaderView } from "@/components/HeaderView";
 
-const DEFAULT_NAV_LINKS = [
-  { label: "About Us", href: "/about-us" },
+const DEFAULT_NAV_LINKS: Array<{ label: string; href: string }> = [
+  // { label: "About Us", href: "/about-us" },
 ];
 
-const DEFAULT_SERVICES_LINKS = [
-  { label: "Debt Syndication", href: "/services/debt-syndication" },
-  { label: "Debt Capital Market", href: "/services/debt-capital-market" },
-  { label: "Credit Assessment", href: "/services/credit-assessment" },
-  { label: "Private Equity", href: "/services/private-equity" },
+const DEFAULT_SERVICES_LINKS: Array<{ label: string; href: string }> = [
+  // { label: "Debt Syndication", href: "/services/debt-syndication" },
+  // { label: "Debt Capital Market", href: "/services/debt-capital-market" },
+  // { label: "Credit Assessment", href: "/services/credit-assessment" },
+  // { label: "Private Equity", href: "/services/private-equity" },
 ];
 
-const DEFAULT_INSIGHTS_LINKS = [
-  { label: "Blogs", href: "/insights/blogs" },
-  { label: "News", href: "/insights/news" },
-  { label: "Reports", href: "/insights/reports" },
+const DEFAULT_INSIGHTS_LINKS: Array<{ label: string; href: string }> = [
+  // { label: "Blogs", href: "/insights/blogs" },
+  // { label: "News", href: "/insights/news" },
+  // { label: "Reports", href: "/insights/reports" },
 ];
 
 type NavigationItemRow = typeof navigationItems.$inferSelect;
