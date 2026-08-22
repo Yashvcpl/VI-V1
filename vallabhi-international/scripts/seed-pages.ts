@@ -91,7 +91,7 @@ const seedPages: SeedPage[] = [
     slug: "about-us",
     title: "About Us",
     seoDescription:
-      "Vallabhi Capital is an RBI-registered NBFC founded in 2021, built to close the credit gap for MSMEs, traders and exporters across India.",
+      "Learn about Vallabhi International, a trusted financial advisory firm helping businesses raise capital, manage risk, and unlock growth through expert financial advisory.",
     sections: [
       {
         type: "hero",
@@ -186,7 +186,7 @@ const seedPages: SeedPage[] = [
     slug: "insights-news",
     title: "Insights - News",
     seoDescription:
-      "Company announcements and press coverage for Vallabhi International and Vallabhi Capital.",
+      "Company announcements and press coverage for Vallabhi International.",
     sections: [
       {
         type: "contentListing",
@@ -218,7 +218,7 @@ const seedPages: SeedPage[] = [
     slug: "careers",
     title: "Careers",
     seoDescription:
-      "Join Vallabhi International - explore open roles and build a career closing India's MSME credit gap.",
+      "Join Vallabhi International - explore open roles and build a career with us.",
     sections: [
       {
         type: "textBlock",
@@ -252,7 +252,7 @@ const seedPages: SeedPage[] = [
     slug: "contact-us",
     title: "Contact Us",
     seoDescription:
-      "Get in touch with Vallabhi International for MSME loans, loan against property, equipment finance and general enquiries.",
+      "Get in touch with Vallabhi International for Financial services.",
     sections: [
       {
         type: "contactInfoBlock",
